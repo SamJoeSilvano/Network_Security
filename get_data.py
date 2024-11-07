@@ -4,8 +4,11 @@ import json
 
 from dotenv import load_dotenv
 load_dotenv()
+MONGO_DB_URL = os.getenv("MONGO_DB_URL")
 
 import certifi
+ca = certifi.where()
+
 import pandas as pd
 import numpy as np
 import pymongo
@@ -26,7 +29,7 @@ class NetworkDataExtract():
         except Exception as e:
             raise NetworkSecurityException(e, sys)
         
-    def pushing_data_to_mongodb(self);
+    def pushing_data_to_mongodb(self):
         try:
             pass
         except Exception as e:
